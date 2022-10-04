@@ -29,11 +29,3 @@ And add Job Description
 And add Job Requirements
 And choose office location
 And click on submit button of job
-
-@Logout
-Scenario: Verify Recruiter Ai Logout Functionality
-Given Click on Logout Button
-
-@CloseBrowser
-Scenario: close Browser
-Given Close Browser

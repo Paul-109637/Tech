@@ -55,11 +55,3 @@ Given Click on Attachments section
 When upload Attachment file
 And click on submit after uploading file
 
-@Logout
-Scenario: Verify Recruiter Ai Logout Functionality
-Given Click on Logout Button
-
-@CloseBrowser
-Scenario: close Browser
-Given Close Browser 
-

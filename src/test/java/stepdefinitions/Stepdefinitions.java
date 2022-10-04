@@ -11,6 +11,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 import cucumber.api.java.en.Given;
@@ -48,25 +49,15 @@ public class Stepdefinitions {
 		Thread.sleep(4000);  
 	}
 
-	/*@Given("^after Login Click on Logout Button$")
-	public void after_Login_Click_on_Logout_Button() throws Throwable {
-		Thread.sleep(4000);
-		driver.findElement(By.xpath("//button[@aria-label='Logout']")).click();
-		Thread.sleep(4000);  
-	}*/
+	
 	@Given("^Close Browser$")
 	public void close_Browser() throws Throwable {
 	    driver.close();
 	}
-	@When("^User clicks on Jobs Menu$")
-	public void user_clicks_on_Jobs_Menu() throws Throwable {
-    Thread.sleep(4000);	
-	driver.findElement(By.xpath("/html/body/section/div[1]/div/header/nav/ul/li[2]/a")).click();
-	}
-
+	
 @Given("^Recruiter clicks on Jobs Menu$")
 public void recruiter_clicks_on_Jobs_Menu() throws Throwable {
-	Thread.sleep(2000);	
+	Thread.sleep(3000);	
 	driver.findElement(By.xpath("/html/body/section/div[1]/div/header/nav/ul/li[2]/a")).click();   
 }
 	
@@ -81,7 +72,7 @@ public void recruiter_clicks_on_Jobs_Menu() throws Throwable {
 @When("^click on Start button of form$")
 public void click_on_Start_button_of_form() throws Throwable {
 	driver.findElement(By.xpath("//div[@class='mt-3']//child::button[contains(text(),'Start')]")).click(); 
-	Thread.sleep(3000);
+	Thread.sleep(4000);
 }
 
 @When("^click on Add New Office button to add new office Address$")
@@ -217,7 +208,7 @@ public void add_Job_Description() throws Throwable {
 public void add_Job_Requirements() throws Throwable {
 	driver.findElement(By.xpath("//div[@class='ql-editor ql-blank']")).sendKeys("candidates should join immediately & candidates should have knowledge on selenium and core java");
 	Thread.sleep(2000);  
-	driver.findElement(By.xpath("//div[@class='ml-2']//child::button[contains(text(),'Submit')]")).click();    
+   
 }
 
 @When("^choose office location$")
@@ -228,13 +219,21 @@ public void choose_office_location() throws Throwable {
 		OfficeAddress.sendKeys(Keys.ARROW_DOWN);
 		Thread.sleep(2000);
 		OfficeAddress.sendKeys(Keys.ENTER);
-		Thread.sleep(2000);  
+		Thread.sleep(3000);  
 		  
 }
+@When("^add date of join$")
+public void add_date_of_join() throws Throwable {
+	 WebElement doj=driver.findElement(By.xpath("(//input[@name='closeDate'])[2]"));
+	 doj.sendKeys("2022-10-22");
+	 doj.sendKeys(Keys.ENTER);
+	 Thread.sleep(2000);
+}
+
 @Given("^click on submit button of job$")
 public void click_on_submit_button_of_job() throws Throwable {
   
-
+    Thread.sleep(2000);
    driver.findElement(By.xpath("//div[@class='ml-2']//child::button[contains(text(),'Submit')]")).click();    
 }
 @Given("^add skills and Education$")

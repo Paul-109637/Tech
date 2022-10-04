@@ -47,7 +47,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Oct 4, 2022 04:03:57 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Oct 4, 2022 03:50:52 PM</span>
 				</a>
 			</li>
 			<li>
@@ -88,10 +88,6 @@
 					<li><a href='#'>@tag</a></li>
 					<li><a href='#'>@Login</a></li>
 					<li><a href='#'>@CreateNewJob</a></li>
-					<li><a href='#'>@EnableCollaborators</a></li>
-					<li><a href='#'>@Enableprescreeningsettings</a></li>
-					<li><a href='#'>@EnableAutoshortlist</a></li>
-					<li><a href='#'>@Interviewsetup</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -154,7 +150,7 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>6</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>2</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -169,7 +165,7 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>39</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>23</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -188,8 +184,8 @@
 				
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Collaborators and interview setup</span>
-						<span class='test-time'>Oct 4, 2022 04:03:57 PM</span>
+						<span class='test-name'>Create new Job with Basic Information</span>
+						<span class='test-time'>Oct 4, 2022 03:50:52 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -197,7 +193,7 @@
 	<div class='category-list'>
 		<span class='category label white-text'>@Login</span>
 	</div>
-	<span class='duration right label'>0h 0m 24s+829ms</span>
+	<span class='duration right label'>0h 0m 24s+186ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
 		<span class="desc-text">Verify Recruiter Ai Login Functionality</span>
@@ -225,10 +221,10 @@
 	<div class='category-list'>
 		<span class='category label white-text'>@CreateNewJob</span>
 	</div>
-	<span class='duration right label'>0h 1m 33s+376ms</span>
+	<span class='duration right label'>0h 1m 32s+899ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
-		<span class="desc-text">Verify create new job functionality</span>
+		<span class="desc-text">Verify create new job functionality with basic information</span>
 	</div>
 	<ul class='steps'>
 		<li test-id='6' class='node given pass' status='pass'>
@@ -401,182 +397,6 @@
 		</li>
 	</ul>
 </div>
-<div class='scenario node' test-id='27' status='pass'>
-	<div class='category-list'>
-		<span class='category label white-text'>@EnableCollaborators</span>
-	</div>
-	<span class='duration right label'>0h 0m 6s+119ms</span>
-	<div class='desc'>
-		<b>Scenario</b>
-		<span class="desc-text">verify Enable Collaborators toggle functionality</span>
-	</div>
-	<ul class='steps'>
-		<li test-id='28' class='node given pass' status='pass'>
-			
-			<b>Given</b>
-			
-			<span class="bdd-step-name">Given Enable collaborator control</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-	</ul>
-</div>
-<div class='scenario node' test-id='29' status='pass'>
-	<div class='category-list'>
-		<span class='category label white-text'>@Enableprescreeningsettings</span>
-	</div>
-	<span class='duration right label'>0h 0m 22s+533ms</span>
-	<div class='desc'>
-		<b>Scenario</b>
-		<span class="desc-text">verify pre screening Settings</span>
-	</div>
-	<ul class='steps'>
-		<li test-id='30' class='node given pass' status='pass'>
-			
-			<b>Given</b>
-			
-			<span class="bdd-step-name">Given enable prescreening settings</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='31' class='node when pass' status='pass'>
-			
-			<b>When</b>
-			
-			<span class="bdd-step-name">When click on Add Question button</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='32' class='node and pass' status='pass'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">And Select questions from Questions List</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='33' class='node and pass' status='pass'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">And click on Add Selected</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='34' class='node and pass' status='pass'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">And ask pre screening questions via chatbot</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='35' class='node and pass' status='pass'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">And enable submit only if candidate answers knockout Questions</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='36' class='node and pass' status='pass'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">And save pre screening Settings</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-	</ul>
-</div>
-<div class='scenario node' test-id='37' status='pass'>
-	<div class='category-list'>
-		<span class='category label white-text'>@EnableAutoshortlist</span>
-	</div>
-	<span class='duration right label'>0h 0m 6s+358ms</span>
-	<div class='desc'>
-		<b>Scenario</b>
-		<span class="desc-text">verify pre screening shortlist criteria</span>
-	</div>
-	<ul class='steps'>
-		<li test-id='38' class='node given pass' status='pass'>
-			
-			<b>Given</b>
-			
-			<span class="bdd-step-name">Given user Enables Autoshortlist button</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='39' class='node when pass' status='pass'>
-			
-			<b>When</b>
-			
-			<span class="bdd-step-name">When user gives passing points</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='40' class='node then pass' status='pass'>
-			
-			<b>Then</b>
-			
-			<span class="bdd-step-name">Then Save Autoshortlist settings</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-	</ul>
-</div>
-<div class='scenario node' test-id='41' status='pass'>
-	<div class='category-list'>
-		<span class='category label white-text'>@Interviewsetup</span>
-	</div>
-	<span class='duration right label'>0h 0m 14s+846ms</span>
-	<div class='desc'>
-		<b>Scenario</b>
-		<span class="desc-text">verify interview setup</span>
-	</div>
-	<ul class='steps'>
-		<li test-id='42' class='node given pass' status='pass'>
-			
-			<b>Given</b>
-			
-			<span class="bdd-step-name">Given user enable interview setup button</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='43' class='node when pass' status='pass'>
-			
-			<b>When</b>
-			
-			<span class="bdd-step-name">When user click on add interview stage</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='44' class='node and pass' status='pass'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">And Choose interview Stage</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='45' class='node and pass' status='pass'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">And choose interview type</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='46' class='node and pass' status='pass'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">And submit interview setup</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-	</ul>
-</div>
 					</div>
 				</li>
 			</ul>
@@ -654,8 +474,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Oct 4, 2022 04:03:57 PM</td>
-										<td class='linked' test-id='1'>Collaborators and interview setup</td>
+										<td>Oct 4, 2022 03:50:52 PM</td>
+										<td class='linked' test-id='1'>Create new Job with Basic Information</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -688,8 +508,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Oct 4, 2022 04:03:57 PM</td>
-										<td class='linked' test-id='2'>Collaborators and interview setup.Verify Recruiter Ai Login Functionality</td>
+										<td>Oct 4, 2022 03:50:52 PM</td>
+										<td class='linked' test-id='2'>Create new Job with Basic Information.Verify Recruiter Ai Login Functionality</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -722,144 +542,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Oct 4, 2022 04:04:22 PM</td>
-										<td class='linked' test-id='5'>Collaborators and interview setup.Verify create new job functionality</td>
-										<td><span class='test-status pass'>pass</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@EnableCollaborators</span>
-						<span class='category-status right'>
-							<span class='label pass'>1</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 1</span>
-							
-							
-						</div>
-					
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Oct 4, 2022 04:05:55 PM</td>
-										<td class='linked' test-id='27'>Collaborators and interview setup.verify Enable Collaborators toggle functionality</td>
-										<td><span class='test-status pass'>pass</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@Enableprescreeningsettings</span>
-						<span class='category-status right'>
-							<span class='label pass'>1</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 1</span>
-							
-							
-						</div>
-					
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Oct 4, 2022 04:06:01 PM</td>
-										<td class='linked' test-id='29'>Collaborators and interview setup.verify pre screening Settings</td>
-										<td><span class='test-status pass'>pass</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@EnableAutoshortlist</span>
-						<span class='category-status right'>
-							<span class='label pass'>1</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 1</span>
-							
-							
-						</div>
-					
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Oct 4, 2022 04:06:24 PM</td>
-										<td class='linked' test-id='37'>Collaborators and interview setup.verify pre screening shortlist criteria</td>
-										<td><span class='test-status pass'>pass</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@Interviewsetup</span>
-						<span class='category-status right'>
-							<span class='label pass'>1</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 1</span>
-							
-							
-						</div>
-					
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Oct 4, 2022 04:06:30 PM</td>
-										<td class='linked' test-id='41'>Collaborators and interview setup.verify interview setup</td>
+										<td>Oct 4, 2022 03:51:17 PM</td>
+										<td class='linked' test-id='5'>Create new Job with Basic Information.Verify create new job functionality with basic information</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -894,31 +578,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>6</div>
+					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>39</div>
+					<div class='panel-lead'>23</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Oct 4, 2022 04:03:57 PM</div>
+					<div class='panel-lead'>Oct 4, 2022 03:50:52 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Oct 4, 2022 04:06:45 PM</div>
+			 		<div class='panel-lead'>Oct 4, 2022 03:52:50 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>168,176ms</div>
+					<div class='panel-lead'>117,185ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -950,30 +634,6 @@
 							<td>0</td>
 							<td>0</td>
 						</tr>
-						<tr>
-							<td>@EnableCollaborators</td>
-							<td>1</td>
-							<td>0</td>
-							<td>0</td>
-						</tr>
-						<tr>
-							<td>@Enableprescreeningsettings</td>
-							<td>1</td>
-							<td>0</td>
-							<td>0</td>
-						</tr>
-						<tr>
-							<td>@EnableAutoshortlist</td>
-							<td>1</td>
-							<td>0</td>
-							<td>0</td>
-						</tr>
-						<tr>
-							<td>@Interviewsetup</td>
-							<td>1</td>
-							<td>0</td>
-							<td>0</td>
-						</tr>
 					</table>
 				</div>
 			</div>
@@ -995,7 +655,7 @@
 				skipParent: 0,
 				exceptionsParent: 0,
 				
-				passChild: 6,
+				passChild: 2,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
@@ -1004,7 +664,7 @@
 				infoChild: 0,
 				exceptionsChild: 0,
 				
-				passGrandChild: 39,
+				passGrandChild: 23,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,

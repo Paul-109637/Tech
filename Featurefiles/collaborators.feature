@@ -57,11 +57,3 @@ When user click on add interview stage
 And Choose interview Stage
 And choose interview type
 And submit interview setup
-
-@Logout
-Scenario: Verify Recruiter Ai Logout Functionality
-Given Click on Logout Button
-
-@CloseBrowser
-Scenario: close Browser
-Given Close Browser 
