@@ -513,4 +513,52 @@ public void click_on_submit_after_uploading_file() throws Throwable {
  Thread.sleep(2000);
  driver.findElement(By.xpath("(//button[@class='bx--btn bx--btn--primary'])[1]")).click();
 }
+@Given("^Candidate click on job link$")
+public void candidate_click_on_job_link() throws Throwable {
+	System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+    driver = new ChromeDriver();
+    driver.manage().deleteAllCookies();
+    driver.manage().window().maximize();
+    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+    driver.get("https://staging.x0pa.ai/app/roboroy/job/607164?sharing=6c12f734e5d295f22b21be"); 
+}
+
+@When("^Candidate click on apply button of Job$")
+public void candidate_click_on_apply_button_of_Job() throws Throwable {
+	    driver.findElement(By.xpath("//a[@id='hs-eu-confirmation-button']")).click();
+	    Thread.sleep(2000);
+	    driver.findElement(By.xpath("//button[contains(text(),'Apply Now')]")).click();
+}
+
+@When("^candidate choose to apply as guest$")
+public void candidate_choose_to_apply_as_guest() throws Throwable {
+ driver.findElement(By.xpath("(//span[@class='bx--radio-button__appearance'])[1]")).click();
+ driver.findElement(By.xpath("//input[@id='candidateFirstName']")).sendKeys("Vinay");
+ WebElement lastname=driver.findElement(By.xpath("//input[@id='candidateLastName']"));
+ lastname.sendKeys("Bhargav");
+Select country=new Select(driver.findElement(By.xpath("//select[@class='bx--select-input']")));
+country.selectByValue("105");
+driver.findElement(By.id("candidatePhoneNumber")).sendKeys("8333939637");
+driver.findElement(By.id("candidateEmail")).sendKeys("paul109637@gmail.com");
+//div[@class='bx--file__drop-container']
+Thread.sleep(2000);
+driver.findElement(By.className("bx--file__drop-container")).click();
+Robot rb = new Robot();
+ StringSelection str = new StringSelection("AI_AUTOMATION\\Docfiles\\Vinay.docx");
+ //AI_AUTOMATION/Docfiles/Vinay.docx
+ //C:\\Users\\paul\\Downloads\\clone\\autobot111\\Docfiles\\Vinay.docx
+Thread.sleep(2000);
+Toolkit.getDefaultToolkit().getSystemClipboard().setContents(str, null);
+ rb.keyPress(KeyEvent.VK_CONTROL);
+ rb.keyPress(KeyEvent.VK_V);
+ rb.keyRelease(KeyEvent.VK_CONTROL);
+ rb.keyRelease(KeyEvent.VK_V);
+ rb.keyPress(KeyEvent.VK_ENTER);
+ rb.keyRelease(KeyEvent.VK_ENTER);
+ Thread.sleep(2000);
+driver.findElement(By.xpath("//label[@class='bx--checkbox-label']")).click();
+Thread.sleep(2000);
+//driver.findElement(By.xpath("//button[contains(text(),'Next')]")).click();
+//driver.findElement(By.id("hs-eu-confirmation-button")).click();
+}
 }

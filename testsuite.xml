@@ -2,6 +2,21 @@
 <suite name="Recruiter Ai Test Suite">
 <test name="Recruiter Ai Login and Logout">
 <classes>
+<class name ="testrunners.AiLoginLogout"/>
+</classes>
+</test>
+<test name="Recruiter Ai Create New Job">
+<classes>
+<class name ="testrunners.CreateNewJob"/>
+</classes>
+</test>
+<test name="Recruiter Ai add collaborators">
+<classes>
+<class name ="testrunners.Collaborators"/>
+</classes>
+</test>
+<test name="Recruiter Ai Candidate Application form">
+<classes>
 <class name ="testrunners.Candidateapply"/>
 </classes>
 </test>
