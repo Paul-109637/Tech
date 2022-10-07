@@ -12,7 +12,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -397,10 +399,11 @@ public void enable_if_job_requires_approvals() throws Throwable {
 public void add_choose_Approval_for() throws Throwable {
 	WebElement approvalfor=driver.findElement(By.xpath("//input[@id='react-select-13-input']"));
 	Thread.sleep(2000);
+	approvalfor.sendKeys("kishore");
 	approvalfor.sendKeys(Keys.ARROW_DOWN);
-	   Thread.sleep(2000);
-	   approvalfor.sendKeys(Keys.ENTER);
-	   Thread.sleep(2000); 
+	Thread.sleep(2000);
+	approvalfor.sendKeys(Keys.ENTER);
+    Thread.sleep(2000); 
 }
 @Given("^Enable collaborator control$")
 public void enable_collaborator_control() throws Throwable {
@@ -533,32 +536,472 @@ public void candidate_click_on_apply_button_of_Job() throws Throwable {
 @When("^candidate choose to apply as guest$")
 public void candidate_choose_to_apply_as_guest() throws Throwable {
  driver.findElement(By.xpath("(//span[@class='bx--radio-button__appearance'])[1]")).click();
- driver.findElement(By.xpath("//input[@id='candidateFirstName']")).sendKeys("Vinay");
- WebElement lastname=driver.findElement(By.xpath("//input[@id='candidateLastName']"));
- lastname.sendKeys("Bhargav");
-Select country=new Select(driver.findElement(By.xpath("//select[@class='bx--select-input']")));
-country.selectByValue("105");
-driver.findElement(By.id("candidatePhoneNumber")).sendKeys("8333939637");
-driver.findElement(By.id("candidateEmail")).sendKeys("paul109637@gmail.com");
-//div[@class='bx--file__drop-container']
-Thread.sleep(2000);
-driver.findElement(By.className("bx--file__drop-container")).click();
-Robot rb = new Robot();
- StringSelection str = new StringSelection("AI_AUTOMATION\\Docfiles\\Vinay.docx");
- //AI_AUTOMATION/Docfiles/Vinay.docx
- //C:\\Users\\paul\\Downloads\\clone\\autobot111\\Docfiles\\Vinay.docx
-Thread.sleep(2000);
-Toolkit.getDefaultToolkit().getSystemClipboard().setContents(str, null);
- rb.keyPress(KeyEvent.VK_CONTROL);
- rb.keyPress(KeyEvent.VK_V);
- rb.keyRelease(KeyEvent.VK_CONTROL);
- rb.keyRelease(KeyEvent.VK_V);
- rb.keyPress(KeyEvent.VK_ENTER);
- rb.keyRelease(KeyEvent.VK_ENTER);
- Thread.sleep(2000);
-driver.findElement(By.xpath("//label[@class='bx--checkbox-label']")).click();
-Thread.sleep(2000);
-//driver.findElement(By.xpath("//button[contains(text(),'Next')]")).click();
-//driver.findElement(By.id("hs-eu-confirmation-button")).click();
+}
+@When("^Candidate enters his first name$")
+public void candidate_enters_his_first_name() throws Throwable {
+	 driver.findElement(By.xpath("//input[@id='candidateFirstName']")).sendKeys("Vinay");   
+}
+
+@When("^Candidate enters his last name$")
+public void candidate_enters_his_last_name() throws Throwable {
+	 WebElement lastname=driver.findElement(By.xpath("//input[@id='candidateLastName']"));
+	 lastname.sendKeys("Bhargav"); 
+}
+
+@When("^Candidate  choose Country$")
+public void candidate_choose_Country() throws Throwable {
+	Select country=new Select(driver.findElement(By.xpath("//select[@class='bx--select-input']")));
+	country.selectByValue("105");  
+}
+
+@When("^Candidate enters Mobile number$")
+public void candidate_enters_Mobile_number() throws Throwable {
+	driver.findElement(By.id("candidatePhoneNumber")).sendKeys("8333939637");  
+}
+
+@When("^Candidate enters his Email Address$")
+public void candidate_enters_his_Email_Address() throws Throwable {
+	driver.findElement(By.id("candidateEmail")).sendKeys("paul109637@gmail.com"); 
+}
+
+@When("^Candidate uploads his resume$")
+public void candidate_uploads_his_resume() throws Throwable {
+	Thread.sleep(2000);
+	driver.findElement(By.className("bx--file__drop-container")).click();
+	Robot rb = new Robot();
+	 StringSelection str = new StringSelection("C:\\Users\\paul\\Downloads\\clone\\autobot111\\Docfiles\\Vinay.docx");
+	 Thread.sleep(2000);
+	 Toolkit.getDefaultToolkit().getSystemClipboard().setContents(str, null);
+	 rb.keyPress(KeyEvent.VK_CONTROL);
+	 rb.keyPress(KeyEvent.VK_V);
+	 rb.keyRelease(KeyEvent.VK_CONTROL);
+	 rb.keyRelease(KeyEvent.VK_V);
+	 rb.keyPress(KeyEvent.VK_ENTER);
+	 rb.keyRelease(KeyEvent.VK_ENTER);   
+}
+
+@Then("^Candidate accepts terms and conditions by clicking on checkbox$")
+public void candidate_accepts_terms_and_conditions_by_clicking_on_checkbox() throws Throwable {
+	driver.findElement(By.xpath("//div[@class='bx--form-item bx--checkbox-wrapper ml-2']")).click();
+}
+
+@Then("^clicks on Next Button$")
+public void clicks_on_Next_Button() throws Throwable {
+	driver.findElement(By.xpath("//button[contains(text(),'Next')]")).click();
+}
+
+@When("^candidate mentions about him in about me text field$")
+public void candidate_mentions_about_him_in_about_me_text_field() throws Throwable {
+	driver.findElement(By.xpath("(//textarea[@id='summary'])[1]")).sendKeys("My name is Vinay.Icompleted my graduation in xyz university & trained on testing tools");   
+}
+
+@Then("^candidate clicks on add button of project$")
+public void candidate_clicks_on_add_button_of_project() throws Throwable {
+	driver.findElement(By.xpath("//a[@id='addProject']")).click(); 
+}
+
+
+@When("^candidate enters project title$")
+public void candidate_enters_project_title() throws Throwable {
+	driver.findElement(By.xpath("//input[@id='project']")).sendKeys("ERP-Stock Accounting"); 
+}
+
+@When("^candidate enters Description of project$")
+public void candidate_enters_Description_of_project() throws Throwable {
+	driver.findElement(By.xpath("(//textarea[@id='summary'])[2]")).sendKeys("This project belongs to ERP,contains different modules .I worked on sales and purchases modules");  
+}
+
+@When("^Candidate selects project start and end dates$")
+public void candidate_selects_project_start_and_end_dates() throws Throwable {
+	driver.findElement(By.xpath("//input[@placeholder='Start Date']")).sendKeys("20 june 2021");
+	driver.findElement(By.xpath("//input[@placeholder='End Date']")).sendKeys("20 December 2021"); 
+}
+
+@When("^Click on Save button of project$")
+public void click_on_Save_button_of_project() throws Throwable {
+	driver.findElement(By.xpath("//button[text()='Save']")).click();
+}
+
+@When("^Candidate click on next Button$")
+public void candidate_click_on_next_Button() throws Throwable {
+	driver.findElement(By.xpath("//button[text()='Next']")).click();
+}
+	@When("^Candidate clicks on edit option of EducationA$")
+	public void candidate_clicks_on_edit_option_of_EducationA() throws Throwable {
+		driver.findElement(By.xpath("//a[@id='editEdu-1']")).click(); 
+	}
+
+	@When("^enters InstituteA Name$")
+	public void enters_InstituteA_Name() throws Throwable {
+		driver.findElement(By.xpath("(//input[@id='institution'])[1]")).sendKeys("Sri YN College");
+	}
+
+	@When("^choose country of instituteA$")
+	public void choose_country_of_instituteA() throws Throwable {
+		Select Country=new Select(driver.findElement(By.xpath("(//select[@class='bx--select-input'])[1]")));
+		Country.selectByValue("India");  
+	}
+
+	@When("^choose city of instituteA$")
+	public void choose_city_of_instituteA() throws Throwable {
+		driver.findElement(By.xpath("(//input[@placeholder='Enter City'])[1]")).sendKeys("Narsapur"); 
+	}
+
+	@When("^select Qualification from InstituteA$")
+	public void select_Qualification_from_InstituteA() throws Throwable {
+		Select Edulevel=new Select(driver.findElement(By.xpath("(//select[@class='bx--select-input'])[2]")));
+		Edulevel.selectByVisibleText("Bachelor's Degree");
+	}
+
+	@When("^Enter CGPA got in InstituteA$")
+	public void enter_CGPA_got_in_InstituteA() throws Throwable {
+		driver.findElement(By.xpath("(//input[@id='gpa'])[1]")).sendKeys("8.0");   
+	}
+
+	@When("^choose start date of InstituteA$")
+	public void choose_start_date_of_InstituteA() throws Throwable {
+		driver.findElement(By.xpath("(//input[@placeholder='Start Date'])[1]")).sendKeys("12th june,2017");  
+	}
+
+	@When("^choose ending date of InstitueA$")
+	public void choose_ending_date_of_InstitueA() throws Throwable {
+		driver.findElement(By.xpath("(//input[@placeholder='End Date'])[1]")).sendKeys("30 April,2021");   
+	}
+
+	@When("^Click on Save Button of EduA$")
+	public void click_on_Save_Button_of_EduA() throws Throwable {
+		driver.findElement(By.xpath("(//button[text()='Save'])[1]")).click();   
+	}
+	@When("^Candidate clicks on edit option of EducationB$")
+	public void candidate_clicks_on_edit_option_of_EducationB() throws Throwable {
+		driver.findElement(By.xpath("//a[@id='editEdu-2']")).click();
+	}
+
+	@When("^enters InstituteB Name$")
+	public void enters_InstituteB_Name() throws Throwable {
+		driver.findElement(By.xpath("(//input[@id='institution'])[2]")).sendKeys("Vikas Junior College");
+	}
+
+	@When("^choose country of instituteB$")
+	public void choose_country_of_instituteB() throws Throwable {
+		Select CountryC2=new Select(driver.findElement(By.xpath("(//select[@class='bx--select-input'])[4]")));
+		CountryC2.selectByValue("India");
+	}
+
+	@When("^choose city of instituteB$")
+	public void choose_city_of_instituteB() throws Throwable {
+		driver.findElement(By.xpath("(//input[@placeholder='Enter City'])[2]")).sendKeys("Malikipuram"); 
+	}
+
+	@When("^select Qualification from InstituteB$")
+	public void select_Qualification_from_InstituteB() throws Throwable {
+		Select EdulevelE2=new Select(driver.findElement(By.xpath("(//select[@class='bx--select-input'])[5]")));
+		EdulevelE2.selectByVisibleText("Diploma");
+	}
+
+	@When("^Enter CGPA got in InstituteB$")
+	public void enter_CGPA_got_in_InstituteB() throws Throwable {
+		driver.findElement(By.xpath("(//input[@id='gpa'])[2]")).sendKeys("8.0");
+	}
+
+	@When("^choose start date of InstituteB$")
+	public void choose_start_date_of_InstituteB() throws Throwable {
+		driver.findElement(By.xpath("(//input[@placeholder='Start Date'])[2]")).sendKeys("12th june,2015");
+	}
+
+	@When("^choose ending date of InstitueB$")
+	public void choose_ending_date_of_InstitueB() throws Throwable {
+		driver.findElement(By.xpath("(//input[@placeholder='End Date'])[2]")).sendKeys("30 April,2017");  
+	}
+
+	@When("^Click on Save Button of EduB$")
+	public void click_on_Save_Button_of_EduB() throws Throwable {
+		driver.findElement(By.xpath("(//button[text()='Save'])[2]")).click(); 
+	}
+	
+	@When("^Candidate clicks on edit option of EducationC$")
+	public void candidate_clicks_on_edit_option_of_EducationC() throws Throwable {
+		driver.findElement(By.xpath("//a[@id='editEdu-3']")).click();
+	}
+
+	@When("^enters InstituteC Name$")
+	public void enters_InstituteC_Name() throws Throwable {
+		driver.findElement(By.xpath("(//input[@id='institution'])[3]")).sendKeys("Vivekananda Public School"); 
+	}
+
+	@When("^choose country of instituteC$")
+	public void choose_country_of_instituteC() throws Throwable {
+		Select CountryC3=new Select(driver.findElement(By.xpath("(//select[@class='bx--select-input'])[7]")));
+		CountryC3.selectByValue("India");
+	}
+
+	@When("^choose city of instituteC$")
+	public void choose_city_of_instituteC() throws Throwable {
+		driver.findElement(By.xpath("(//input[@placeholder='Enter City'])[3]")).sendKeys("Malikipuram");
+	}
+
+	@When("^select Qualification from InstituteC$")
+	public void select_Qualification_from_InstituteC() throws Throwable {
+		Select EdulevelE3=new Select(driver.findElement(By.xpath("(//select[@class='bx--select-input'])[8]")));
+		EdulevelE3.selectByVisibleText("High School or Equivalent");
+	}
+
+	@When("^Enter CGPA got in InstituteC$")
+	public void enter_CGPA_got_in_InstituteC() throws Throwable {
+		driver.findElement(By.xpath("(//input[@id='gpa'])[3]")).sendKeys("8.0"); 
+	}
+
+	@When("^choose start date of InstituteC$")
+	public void choose_start_date_of_InstituteC() throws Throwable {
+		driver.findElement(By.xpath("(//input[@placeholder='Start Date'])[3]")).sendKeys("12th june,2014"); 
+	}
+
+	@When("^choose ending date of InstitueC$")
+	public void choose_ending_date_of_InstitueC() throws Throwable {
+		driver.findElement(By.xpath("(//input[@placeholder='End Date'])[3]")).sendKeys("30 April,2015");   
+	}
+
+	@When("^Click on Save Button of EduC$")
+	public void click_on_Save_Button_of_EduC() throws Throwable {
+		driver.findElement(By.xpath("(//button[text()='Save'])[3]")).click();  
+	}
+	@When("^candidate rate for skills$")
+	public void candidate_rate_for_skills() throws Throwable {
+		driver.findElement(By.xpath("java_5")).click();
+		driver.findElement(By.xpath("//label[@for='microsoft sql server_4']")).click(); 
+	}
+
+	@When("^candidate click on submit button of Application$")
+	public void candidate_click_on_submit_button_of_Application() throws Throwable {
+		driver.findElement(By.xpath("//button[text()='Submit']")).click();
+	}
+	@When("^candidate choose sign in option to apply$")
+	public void candidate_choose_sign_in_option_to_apply() throws Throwable {
+		 driver.findElement(By.xpath("(//span[@class='bx--radio-button__appearance'])[2]")).click();
+	}
+
+	@Given("^candidate click on register Link$")
+	public void candidate_click_on_register_Link() throws Throwable {
+	driver.findElement(By.xpath("//a[text()='Register']")).click();
+	}
+	@When("^candidate enter first name$")
+	public void candidate_enter_first_name() throws Throwable {
+		driver.findElement(By.xpath("//input[@id='firstName']")).sendKeys("Vinay"); 
+	}
+
+	@When("^candidate enter last name$")
+	public void candidate_enter_last_name() throws Throwable {
+		driver.findElement(By.xpath("//input[@id='lastName']")).sendKeys("Bhargav");
+	}
+
+	@When("^candidate enters email$")
+	public void candidate_enters_email() throws Throwable {
+		driver.findElement(By.xpath("//input[@id='email']")).sendKeys("paul109637@gmail.com");  
+	}
+
+	@When("^candidate enters password$")
+	public void candidate_enters_password() throws Throwable {
+		driver.findElement(By.xpath("//input[@id='password']")).sendKeys("Paul109637$"); 
+	}
+
+	@When("^candidate enters conform password$")
+	public void candidate_enters_conform_password() throws Throwable {
+		driver.findElement(By.xpath("//input[@name='confirmpassword']")).sendKeys("Paul109637$");  
+	}
+
+	@When("^candidate accepts terms and conditions$")
+	public void candidate_accepts_terms_and_conditions() throws Throwable {
+		driver.findElement(By.xpath("//label[@class='bx--checkbox-label']")).click();  
+	}
+
+	@When("^candidate enters submit button of registration$")
+	public void candidate_enters_submit_button_of_registration() throws Throwable {
+		driver.findElement(By.xpath("//button[text()='Submit']")).click();  
+	}
+
+	@Given("^candidate click on click here to login$")
+	public void candidate_click_on_click_here_to_login() throws Throwable {
+		driver.findElement(By.xpath("//span[@class='xpa-link']")).click();
+	}
+
+	@When("^candidate enters email to login$")
+	public void candidate_enters_email_to_login() throws Throwable {
+		driver.findElement(By.xpath("//input[@name='username']")).sendKeys("paul109637@gmail.com");
+	}
+
+	@When("^candidate enters password to login$")
+	public void candidate_enters_password_to_login() throws Throwable {
+		driver.findElement(By.xpath("//input[@name='password']")).sendKeys("Paul109637$"); 
+	}
+
+	@When("^candidate click on recaptcha button$")
+	public void candidate_click_on_recaptcha_button() throws Throwable {
+		Thread.sleep(4000);
+		driver.findElement(By.xpath("//span[@id='recaptcha-anchor']")).click();
+	}
+
+	@When("^candidate clicks on login button$")
+	public void candidate_clicks_on_login_button() throws Throwable {
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//button[text()='Login']")).click();
+	}
+		@Then("^Signed in Candidate click on Apply button of Job$")
+		public void signed_in_Candidate_click_on_Apply_button_of_Job() throws Throwable {
+			driver.findElement(By.xpath("//span[text()='Apply']")).click(); 
+		}
+
+@Then("^click on checkbox to recieve whatsapp notifications$")
+public void click_on_checkbox_to_recieve_whatsapp_notifications() throws Throwable {
+	driver.findElement(By.xpath("(//label[@class='bx--checkbox-label'])[1]")).click();
+}
+
+@Given("^click on Total Applications available on dashboard$")
+public void click_on_Total_Applications_available_on_dashboard() throws Throwable {
+  driver.findElement(By.xpath("(//div[text()='Total Applications'])[1]")).click();
+}
+@Then("^select an application from list of applications$")
+public void select_an_application_from_list_of_applications() throws Throwable {
+	driver.findElement(By.xpath("(//label[@class='bx--checkbox-label'])[2]")).click();  
+}
+
+@Then("^Shortlist the selected Application$")
+public void shortlist_the_selected_Application() throws Throwable {
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("(//button[@class='bx--btn bx--btn--primary'])[6]")).click(); 
+}
+
+@Then("^add additional email recipients$")
+public void add_additional_email_recipients() throws Throwable {
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//input[@id='emailshare']")).sendKeys("paulindia637@gmail.com");  
+}
+
+@Then("^click on Submit button to send email to candidate$")
+public void click_on_Submit_button_to_send_email_to_candidate() throws Throwable {
+	driver.findElement(By.xpath("(//button[text()='Submit'])[1]")).click();
+}
+@Given("^click on add to talent pool button after selecting candidate$")
+public void click_on_add_to_talent_pool_button_after_selecting_candidate() throws Throwable {
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("(//button[@class='bx--btn bx--btn--primary'])[5]")).click();
+}
+
+@Then("^recruiter choose add to new bucket Option$")
+public void recruiter_choose_add_to_new_bucket_Option() throws Throwable {
+	driver.findElement(By.xpath("(//span[@class='bx--radio-button__appearance'])[4]")).click();
+}
+
+@When("^recruiter names the new Bucket$")
+public void recruiter_names_the_new_Bucket() throws Throwable {
+	driver.findElement(By.xpath("//input[@id='bucketName']")).sendKeys("Talent1");
+}
+
+@Then("^Click on Submit Button of Talent pool$")
+public void click_on_Submit_Button_of_Talent_pool() throws Throwable {
+	driver.findElement(By.xpath("(//button[text()='Submit'])[1]")).click(); 
+	}
+@Given("^click on Add Email Button after selecting Candidate$")
+public void click_on_Add_Email_Button_after_selecting_Candidate() throws Throwable {
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("(//button[@class='bx--btn bx--btn--primary'])[10]")).click();
+}
+
+@Then("^choose Email template to send to candidate$")
+public void choose_Email_template_to_send_to_candidate() throws Throwable {
+	Select emailtemp=new Select(driver.findElement(By.xpath("(//select[@id='email-templates-list'])[2]")));
+	emailtemp.selectByValue("1_shortlist");
+}
+
+@Then("^click on Submit button of EmailTemplates$")
+public void click_on_Submit_button_of_EmailTemplates() throws Throwable {
+	driver.findElement(By.xpath("(//button[text()='Submit'])[4]")).click();  
+}	
+
+@Given("^click on KIV after selecting candidate from Applicants list$")
+public void click_on_KIV_after_selecting_candidate_from_Applicants_list() throws Throwable {
+   driver.findElement(By.xpath("(//button[@class='bx--btn bx--btn--primary'])[8]")).click();
+}
+
+@Then("^choose as required by using toggle and submit$")
+public void choose_as_required_by_using_toggle_and_submit() throws Throwable {
+	driver.findElement(By.xpath("(//button[text()='Submit'])[1]")).click();
+   
+}
+@Given("^Recruiter clicks on change stage option for selected Application$")
+public void recruiter_clicks_on_change_stage_option_for_selected_Application() throws Throwable {
+   driver.findElement(By.xpath("(//button[@class='bx--btn bx--btn--primary'])[9]")).click();
+}
+
+@Then("^select the stage to send Application$")
+public void select_the_stage_to_send_Application() throws Throwable {
+	WebElement changestage=driver.findElement(By.xpath("//input[@id='react-select-2-input']"));
+	changestage.sendKeys("Interview");
+	Thread.sleep(2000);
+	changestage.sendKeys(Keys.ARROW_DOWN);
+	Thread.sleep(2000);
+	changestage.sendKeys(Keys.ENTER);
+    Thread.sleep(2000); 
+	
+}
+
+@Then("^click on submit after changing Stage$")
+public void click_on_submit_after_changing_Stage() throws Throwable {
+	driver.findElement(By.xpath("(//button[text()='Submit'])[1]")).click();
+}
+@Given("^click on download option to download cv of selected candidate$")
+public void click_on_download_option_to_download_cv_of_selected_candidate() throws Throwable {
+	 driver.findElement(By.xpath("(//button[@class='bx--btn bx--btn--primary'])[11]")).click();   
+}
+
+@Then("^click on submit to download cv$")
+public void click_on_submit_to_download_cv() throws Throwable {
+	driver.findElement(By.xpath("(//button[text()='Submit'])[1]")).click();  
 }
 }
+
+		
+
+
+  
+  
+  
+
+  
+		  
+		  
+
+	
+
+	
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+

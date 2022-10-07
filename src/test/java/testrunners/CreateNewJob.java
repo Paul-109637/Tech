@@ -8,7 +8,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features={"featurefiles/CreateCompleteJob.feature"},glue="stepdefinitions",dryRun=false,
-plugin={"com.cucumber.listener.ExtentCucumberFormatter:Reports/createcompletejob.html"})
+plugin={"com.cucumber.listener.ExtentCucumberFormatter:Reports/createnewjob.html"})
 public class CreateNewJob extends AbstractTestNGCucumberTests
 {
 

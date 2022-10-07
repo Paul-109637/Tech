@@ -1,23 +1,43 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Recruiter Ai Test Suite">
-<test name="Recruiter Ai Login and Logout">
+<test name="Login and Logout">
 <classes>
 <class name ="testrunners.AiLoginLogout"/>
 </classes>
 </test>
-<test name="Recruiter Ai Create New Job">
+<test name="Create Basic Job">
+<classes>
+<class name ="testrunners.CreateJobBasic"/>
+</classes>
+</test>
+<test name="Create New Job">
 <classes>
 <class name ="testrunners.CreateNewJob"/>
 </classes>
 </test>
-<test name="Recruiter Ai add collaborators">
+<test name="add collaborators">
 <classes>
 <class name ="testrunners.Collaborators"/>
 </classes>
 </test>
-<test name="Recruiter Ai Candidate Application form">
+<test name="Guest Candidate apply for a job">
 <classes>
-<class name ="testrunners.Candidateapply"/>
+<class name ="testrunners.GuestCandidate"/>
+</classes>
+</test>
+<test name="Candidate Registration">
+<classes>
+<class name ="testrunners.CandidateRegistration"/>
+</classes>
+</test>
+<test name="Recruiter Ai Signed in Candidate apply for a job">
+<classes>
+<class name ="testrunners.RegisteredCandidate"/>
+</classes>
+</test>
+<test name="Recruiter Ai Shortlist">
+<classes>
+<class name ="testrunners.Shortlist"/>
 </classes>
 </test>
 </suite>
