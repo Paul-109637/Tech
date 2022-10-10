@@ -1,12 +1,23 @@
 package stepdefinitions;
 
+
 import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+import java.util.List;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import javax.mail.Folder;
+import javax.mail.Session;
+import javax.mail.Store;
+
+import org.apache.commons.mail.DefaultAuthenticator;
+import org.apache.commons.mail.Email;
+import org.apache.commons.mail.SimpleEmail;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -582,7 +593,9 @@ public void candidate_uploads_his_resume() throws Throwable {
 
 @Then("^Candidate accepts terms and conditions by clicking on checkbox$")
 public void candidate_accepts_terms_and_conditions_by_clicking_on_checkbox() throws Throwable {
-	driver.findElement(By.xpath("//div[@class='bx--form-item bx--checkbox-wrapper ml-2']")).click();
+	String script = "window.getComputedStyle(document.querySelector('.bx--checkbox-label'),':before')";
+	JavascriptExecutor js = (JavascriptExecutor)driver;
+	js.executeScript("arguments[0].click(); ", script);
 }
 
 @Then("^clicks on Next Button$")
@@ -893,7 +906,7 @@ public void recruiter_choose_add_to_new_bucket_Option() throws Throwable {
 
 @When("^recruiter names the new Bucket$")
 public void recruiter_names_the_new_Bucket() throws Throwable {
-	driver.findElement(By.xpath("//input[@id='bucketName']")).sendKeys("Talent1");
+	driver.findElement(By.xpath("//input[@id='bucketName']")).sendKeys("Talent7");
 }
 
 @Then("^Click on Submit Button of Talent pool$")
@@ -929,12 +942,16 @@ public void choose_as_required_by_using_toggle_and_submit() throws Throwable {
 }
 @Given("^Recruiter clicks on change stage option for selected Application$")
 public void recruiter_clicks_on_change_stage_option_for_selected_Application() throws Throwable {
+	Thread.sleep(2000);
    driver.findElement(By.xpath("(//button[@class='bx--btn bx--btn--primary'])[9]")).click();
+  
 }
 
 @Then("^select the stage to send Application$")
 public void select_the_stage_to_send_Application() throws Throwable {
+	Thread.sleep(2000);
 	WebElement changestage=driver.findElement(By.xpath("//input[@id='react-select-2-input']"));
+	Thread.sleep(2000);
 	changestage.sendKeys("Interview");
 	Thread.sleep(2000);
 	changestage.sendKeys(Keys.ARROW_DOWN);
@@ -955,8 +972,28 @@ public void click_on_download_option_to_download_cv_of_selected_candidate() thro
 
 @Then("^click on submit to download cv$")
 public void click_on_submit_to_download_cv() throws Throwable {
-	driver.findElement(By.xpath("(//button[text()='Submit'])[1]")).click();  
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("(//button[text()='Submit'])[5]")).click();
+	
 }
+@Then("^select the application by clicking on Name of the Candidate$")
+public void select_the_application_by_clicking_on_Name_of_the_Candidate() throws Throwable {
+	driver.findElement(By.xpath("(//span[text()='Vinay Bhargav'])[1]")).click();
+}
+@Given("^launch outlook and sign in with valid credentials$")
+public void launch_outlook_and_sign_in_with_valid_credentials() throws Throwable {
+	System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+    driver = new ChromeDriver();
+    driver.manage().window().maximize();
+    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+    driver.get("https://outlook.office365.com/login"); 
+    driver.findElement(By.xpath("(//div[@class='table-cell text-left content'])[1]")).click();
+    
+
+
+  
+}
+
 }
 
 		

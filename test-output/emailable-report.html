@@ -9,34 +9,35 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Recruiter Ai Test Suite</th></tr>
-<tr><td><a href="#t0">Recruiter Ai Login and Logout</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">45,201</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">Create New Job with Basic Information</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">125,836</td><td></td><td></td></tr>
-<tr><td><a href="#t2">Create New Job with all Details</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">109,244</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t3">Add Collaborators and Interview Setup</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">228,376</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">1</th><th class="num">0</th><th class="num attn">3</th><th class="num">508,657</th><th colspan="2"></th></tr>
+<tr><td><a href="#t0">Recruiter Ai Login and Logout</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">45,387</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Recruiter Ai Create New Job</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">158,581</td><td></td><td></td></tr>
+<tr><td><a href="#t2">Recruiter Ai add collaborators</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">167,120</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t3">Recruiter Ai Candidate Application form</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">126,012</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">3</th><th class="num">0</th><th class="num attn">1</th><th class="num">497,100</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Recruiter Ai Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Recruiter Ai Login and Logout &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testrunners.AiLoginLogout</td><td><a href="#m0">feature</a></td><td rowspan="1">1664869521311</td><td rowspan="1">43463</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">Create New Job with Basic Information &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testrunners.CreateJobBasic</td><td><a href="#m1">feature</a></td><td rowspan="1">1664869565788</td><td rowspan="1">125384</td></tr></tbody>
-<tbody id="t2"><tr><th colspan="4">Create New Job with all Details &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testrunners.CreateCompleteJob</td><td><a href="#m2">feature</a></td><td rowspan="1">1664869691586</td><td rowspan="1">108920</td></tr></tbody>
-<tbody id="t3"><tr><th colspan="4">Add Collaborators and Interview Setup &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testrunners.Collaborators</td><td><a href="#m3">feature</a></td><td rowspan="1">1664869800806</td><td rowspan="1">228069</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Recruiter Ai Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Recruiter Ai Login and Logout &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testrunners.AiLoginLogout</td><td><a href="#m0">feature</a></td><td rowspan="1">1665048696909</td><td rowspan="1">41894</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Recruiter Ai Create New Job &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testrunners.CreateNewJob</td><td><a href="#m1">feature</a></td><td rowspan="1">1665048741823</td><td rowspan="1">158143</td></tr></tbody>
+<tbody id="t2"><tr><th colspan="4">Recruiter Ai add collaborators &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testrunners.Collaborators</td><td><a href="#m2">feature</a></td><td rowspan="1">1665048900352</td><td rowspan="1">166781</td></tr></tbody>
+<tbody id="t3"><tr><th colspan="4">Recruiter Ai Candidate Application form &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testrunners.Candidateapply</td><td><a href="#m3">feature</a></td><td rowspan="1">1665049067488</td><td rowspan="1">125643</td></tr></tbody>
 </table>
 <h2>Recruiter Ai Login and Logout</h2><h3 id="m0">testrunners.AiLoginLogout#feature</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Login and Logout</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Create New Job with Basic Information</h2><h3 id="m1">testrunners.CreateJobBasic#feature</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Create new Job with Basic Information</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">cucumber.runtime.CucumberException: org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button href=&quot;/auth/logout&quot; aria-label=&quot;Logout&quot; class=&quot;bx--header__action&quot; type=&quot;button&quot;&gt;...&lt;/button&gt; is not clickable at point (1512, 24). Other element would receive the click: &lt;div class=&quot;Toastify__toast-container Toastify__toast-container--top-right&quot;&gt;...&lt;/div&gt;
+<h2>Recruiter Ai Create New Job</h2><h3 id="m1">testrunners.CreateNewJob#feature</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Create New Job with all details</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Recruiter Ai add collaborators</h2><h3 id="m2">testrunners.Collaborators#feature</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Collaborators and interview setup</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">cucumber.runtime.CucumberException: org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a class=&quot;bx--header__menu-item&quot; tabindex=&quot;0&quot;&gt;...&lt;/a&gt; is not clickable at point (401, 23). Other element would receive the click: &lt;div class=&quot;bx--loading-overlay&quot;&gt;...&lt;/div&gt;
   (Session info: chrome=106.0.5249.91)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;PAUL&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
+System info: host: &apos;PAUL&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.91, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63741}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 232f1d8b60de08116243939846c82799
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.91, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:58395}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 587957778e342b3e41be2f37815bde04
 	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
 	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
-Caused by: org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button href=&quot;/auth/logout&quot; aria-label=&quot;Logout&quot; class=&quot;bx--header__action&quot; type=&quot;button&quot;&gt;...&lt;/button&gt; is not clickable at point (1512, 24). Other element would receive the click: &lt;div class=&quot;Toastify__toast-container Toastify__toast-container--top-right&quot;&gt;...&lt;/div&gt;
+Caused by: org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a class=&quot;bx--header__menu-item&quot; tabindex=&quot;0&quot;&gt;...&lt;/a&gt; is not clickable at point (401, 23). Other element would receive the click: &lt;div class=&quot;bx--loading-overlay&quot;&gt;...&lt;/div&gt;
   (Session info: chrome=106.0.5249.91)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;PAUL&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
+System info: host: &apos;PAUL&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.91, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63741}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 232f1d8b60de08116243939846c82799
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.91, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:58395}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 587957778e342b3e41be2f37815bde04
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -45,68 +46,9 @@ Session ID: 232f1d8b60de08116243939846c82799
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at stepdefinitions.Stepdefinitions.click_on_Logout_Button(Stepdefinitions.java:47)
-	at ✽.Given Click on Logout Button(featurefiles/CreateJobBasic.feature:35)
+	at stepdefinitions.Stepdefinitions.recruiter_clicks_on_Jobs_Menu(Stepdefinitions.java:61)
+	at ✽.Given Recruiter clicks on Jobs Menu(Featurefiles/collaborators.feature:11)
 ... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Create New Job with all Details</h2><h3 id="m2">testrunners.CreateCompleteJob#feature</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Create New Job with all details</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">cucumber.runtime.CucumberException: org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input id=&quot;noOfVacancies&quot; placeholder=&quot;1&quot; type=&quot;number&quot; class=&quot;bx--text-input bx--text__input&quot; title=&quot;1&quot; name=&quot;noOfVacancies&quot; min=&quot;1&quot; max=&quot;1000&quot; value=&quot;1&quot;&gt; is not clickable at point (1032, 694). Other element would receive the click: &lt;div class=&quot;bx--modal bx--modal-tall is-visible&quot; role=&quot;presentation&quot;&gt;...&lt;/div&gt;
-  (Session info: chrome=106.0.5249.91)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;PAUL&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.91, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63970}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 53fc7a1711afe734f1810fab9603cccd
-	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
-	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
-Caused by: org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input id=&quot;noOfVacancies&quot; placeholder=&quot;1&quot; type=&quot;number&quot; class=&quot;bx--text-input bx--text__input&quot; title=&quot;1&quot; name=&quot;noOfVacancies&quot; min=&quot;1&quot; max=&quot;1000&quot; value=&quot;1&quot;&gt; is not clickable at point (1032, 694). Other element would receive the click: &lt;div class=&quot;bx--modal bx--modal-tall is-visible&quot; role=&quot;presentation&quot;&gt;...&lt;/div&gt;
-  (Session info: chrome=106.0.5249.91)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;PAUL&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.91, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63970}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 53fc7a1711afe734f1810fab9603cccd
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at stepdefinitions.Stepdefinitions.add_no_of_vacancies(Stepdefinitions.java:204)
-	at ✽.And add no of vacancies(featurefiles/CreateCompleteJob.feature:24)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Add Collaborators and Interview Setup</h2><h3 id="m3">testrunners.Collaborators#feature</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Collaborators and interview setup</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">cucumber.runtime.CucumberException: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;app-container&apos;]/div[1]/div/div[3]/div/section/div/div/div[4]/div[2]/div[1]/div[2]/div[1]/div[2]/div[2]/label/span&quot;}
-  (Session info: chrome=106.0.5249.91)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;PAUL&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.91, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:64175}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 3e0c84177a649108a4521d6bdced793c
-*** Element info: {Using=xpath, value=//*[@id=&apos;app-container&apos;]/div[1]/div/div[3]/div/section/div/div/div[4]/div[2]/div[1]/div[2]/div[1]/div[2]/div[2]/label/span}
-	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
-	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;app-container&apos;]/div[1]/div/div[3]/div/section/div/div/div[4]/div[2]/div[1]/div[2]/div[1]/div[2]/div[2]/label/span&quot;}
-  (Session info: chrome=106.0.5249.91)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;PAUL&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.91, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\paul\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:64175}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 3e0c84177a649108a4521d6bdced793c
-*** Element info: {Using=xpath, value=//*[@id=&apos;app-container&apos;]/div[1]/div/div[3]/div/section/div/div/div[4]/div[2]/div[1]/div[2]/div[1]/div[2]/div[2]/label/span}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at stepdefinitions.Stepdefinitions.enable_collaborator_control(Stepdefinitions.java:409)
-	at ✽.Given Enable collaborator control(Featurefiles/collaborators.feature:35)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Recruiter Ai Candidate Application form</h2><h3 id="m3">testrunners.Candidateapply#feature</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Candidate Job Application form</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -75,13 +75,19 @@
 			<artifactId>maven-cucumber-reporting</artifactId>
 			<version>4.5.0</version>
 		</dependency>
-	
-<!-- https://mvnrepository.com/artifact/net.masterthought/maven-cucumber-reporting -->
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-email -->
+    	<dependency>
+    	    <groupId>org.apache.commons</groupId>
+    	    <artifactId>commons-email</artifactId>
+    	    <version>1.5</version>
+    	</dependency>
+<!-- https://mvnrepository.com/artifact/javax.mail/javax.mail-api -->
 <dependency>
-    <groupId>net.masterthought</groupId>
-    <artifactId>maven-cucumber-reporting</artifactId>
-    <version>4.5.0</version>
+    <groupId>javax.mail</groupId>
+    <artifactId>javax.mail-api</artifactId>
+    <version>1.6.2</version>
 </dependency>
+
 </dependencies>
 	<build>
  <plugins>
